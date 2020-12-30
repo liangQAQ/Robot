@@ -1,6 +1,5 @@
 package org.example.utils;
 
-import org.example.App;
 import org.example.config.GlobelConfig;
 import org.example.constants.Constants;
 
