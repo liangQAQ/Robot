@@ -15,9 +15,18 @@ public class App
 {
     public static void main( String[] args ) throws InterruptedException {
         init();
+        int count = 0;
         while(true){
             if(GlobelConfig.SWITCHFLAG){
                 RobotUtils.presskey(KeyEvent.VK_D);
+                count++;
+                if(count >= 200){
+                    Thread.sleep(1000);
+                    System.out.println("暂停攻击加buff");
+                    RobotUtils.presskey(KeyEvent.VK_INSERT); //开花
+                    RobotUtils.presskey(KeyEvent.VK_PAGE_UP);//喂宠物
+                    count = 0;
+                }
             }else{
                 //阻塞
                 System.out.println("wait");
