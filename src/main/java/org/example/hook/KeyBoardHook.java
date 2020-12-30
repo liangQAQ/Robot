@@ -30,9 +30,6 @@ public class KeyBoardHook implements Runnable{
         public WinDef.LRESULT callback(int nCode, WinDef.WPARAM wParam, WinUser.KBDLLHOOKSTRUCT event) {
             // 输出按键值和按键时间
             if (nCode >= 0) {
-                String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-                System.out.println(time + " KEY: " + event.vkCode);
-
                 if(event.vkCode== shutdown){
                     System.out.println("结束");
                     setHookOff();
