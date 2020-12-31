@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
  */
 public class App 
 {
-    private static final int attackCount = 110;
+    private static final int attackCount = 119;
 
     public static void main( String[] args ) throws InterruptedException {
         init();
@@ -25,6 +25,8 @@ public class App
                     RobotUtils.presskey(KeyEvent.VK_PAGE_UP);//喂宠物
                     Thread.sleep(1000);
                     RobotUtils.presskey(KeyEvent.VK_X); //开花
+                    Thread.sleep(1000);
+                    RobotUtils.presskey(KeyEvent.VK_DELETE); //蓝
                     Thread.sleep(1000);
                     count = 0;
                 }
